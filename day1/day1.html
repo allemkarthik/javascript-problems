@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // problem one Atm
+
+var insertcard="karthik";
+var atmpin=8553
+
+var username=prompt("insert your card: ")
+var pin=+prompt("enter your pin: ")
+
+var amount=100000
+
+var arr=["changepin","withdraw","deposit","check Balance"]
+
+function atm(){
+    if(insertcard==username && atmpin==pin){
+        console.log("login sucessfull");
+        
+        
+        
+            console.log(arr);
+            option=prompt("enter your option: ")
+            console.log(option);
+        
+        
+            if(option=="changepin"){
+                pin=prompt("enter your new pin")
+                atmpin=pin
+                console.log(pin);
+                console.log("sucessfully changed")
+
+            }
+            else if(option=="withdraw"){
+                withdraw=+prompt("enter the amount to be withdraw: ")
+                amount=amount-withdraw
+                console.log("withdraw sucessfull");
+                console.log(amount,"total amount after withdraw");
+
+
+            
+            }
+            else if (option=="deposit"){
+                deposit=+prompt("enter amount to be deposit")
+                amount=amount+deposit
+                console.log("deposit sucessfull");
+                console.log(amount,"total amount after deposit");
+
+
+            }
+            else if(option=="check Balance"){
+                console.log(amount,"this is your total amount");
+
+            }
+        
+            else{
+                console.log("please enter the above mentioned options only....");
+                
+
+            }
+            
+    }
+    
+
+    else{
+        console.log("invalid card");
+        
+    }
+}
+atm()
+    </script>
+</body>
+</html>
