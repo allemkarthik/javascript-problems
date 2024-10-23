@@ -12,13 +12,12 @@ for(i of arr){
 }
 console.log(res,dup);
 res.sort((a,b)=>a-b)
-for(j of res){
+for(j of dup){
     count=0
     for(k of arr){
         if(j==k){
             count++
         }
     }
-    
     console.log(j,"is present",count,"times");
 }
